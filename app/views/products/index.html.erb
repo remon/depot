@@ -1,0 +1,46 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
+
+
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>photo url</th>
+    <th>Price</th>
+     <th>options</th>
+
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+ 
+    <td><%= link_to product.title,product %></td>
+    <td><%= sanitize(product.description) %>
+    	<div id="productreviews">
+    		<% if product.comments.size >= 1%>
+    	,these product has <%=product.comments.count%> <%=link_to "reviews" ,product_comments_path(product)%></td>
+    	<% else %>
+    	<em>no reviews <%= link_to "add review",new_product_comment_path(product)%> </em>
+    	<% end %>
+    </div >
+     <td><%=link_to image_tag(product.photo.url(:medium)),product %></td>
+    <td><%= product.price %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if session[:user_id]%>
+
+<%= link_to 'New Product', new_product_path %>
+<% end %>

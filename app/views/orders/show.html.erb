@@ -1,0 +1,47 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<p>
+  <b>Name:</b>
+  <%= @order.name %>
+</p>
+
+<p>
+  <b>Adress:</b>
+  <%= @order.adress %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @order.email %>
+</p>
+
+<p>
+  <b>Pay type:</b>
+  <%= @order.pay_type %>
+ 
+</p>
+<p>
+  <b>shipping date:</b>
+  <%= @order.shipping %>
+ 
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+</br>
+</br>
+</br>
+
+<p>These order contain the following products and amounts :</p>
+
+<%= render @order.line_items %>
+</br>
+</br>
+</br>
+</br>
+
+<%= link_to 'Back', orders_path %>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+ <%= stylesheet_link_tag "scaffold" %>
+<%= stylesheet_link_tag "depot", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<div id="container">
+	 <div id="menu">
+        <ul>
+        	
+<% if session[:user_id]%>
+          <li><%= link_to "Customers",users_path %></a></li>
+          <% end %>
+        </ul>
+      </div>
+<body id="store" >
+<div id="banner" >
+	
+<%= image_tag("logo.png") %>
+<%= @page_title || "Remo E-cart" %>
+</div>
+
+	
+</div>
+<div id="main" >
+	<% render :partial=>"users/form"%>
+<%= yield %>
+</div>
+</div>
+
+<div id="footer">
+
+	welcome to my cart ,...if you have any question ,send me mail </div>
+
+</body>
+
+
+</body>
+</div>
+</html>

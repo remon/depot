@@ -1,0 +1,11 @@
+<%= form_for([@product,@product.comments.new]) do |f| %>
+  
+  <div class="field">
+    <%= f.label :body,"your review" %><br />
+    <%= f.text_field :body ,:size=>40%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit'place order ' %>
+  </div>
+<% end %>

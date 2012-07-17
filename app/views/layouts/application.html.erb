@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+ <%= stylesheet_link_tag "scaffold" %>
+<%= stylesheet_link_tag "depot", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<div id="container">
+	 <div id="menu">
+        <ul>
+        	<% if session[:user_id]%>
+        	<% if @cart.line_items.size>=1%>
+          <li><%= link_to "Order",new_order_path %></a></li>
+          <% end %>
+          <% end %>
+  
+<% if session[:user_id]%>
+          <li><%= link_to "Customers",users_path %></a></li>
+          <% end %>
+        </ul>
+      </div>
+<body id="store" >
+<div id="banner" >
+	
+<%= image_tag("logo.png") %>
+<%= @page_title || "Remo E-cart" %>
+</div>
+<div id="columns" >
+
+<div id="side" >
+<% if session[:user_id]%>
+<% if @cart %>
+<%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+<%= render @cart %>
+<% end %>
+<% end %>
+<% end %>
+
+
+<br/>
+<%= link_to "Products",products_path %></br>
+<%= link_to "Store",store_path %></br>
+<br/>
+<% if session[:user_id]%>
+<%= button_to 'Logout',logout_path,:confirm=>"Are you sure that you want to logout ?",:method=>:delete%>
+<% else%>
+<%= link_to 'Register', new_user_path %>
+<%= button_to "Login",login_path ,:class=>"btn btn-primary"%>
+<% end %>
+	<button class="btn" type="submit">
+  Button
+</button>
+</div>
+<div id="main" >
+<%= yield %>
+</div>
+</div>
+
+<div id="footer">
+
+	welcome to my cart ,...if you have any question ,send me mail </div>
+
+</body>
+
+
+</body>
+</div>
+</html>

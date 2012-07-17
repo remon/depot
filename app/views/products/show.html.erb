@@ -1,0 +1,8 @@
+<%=render @product%>
+<h3>Comments</h3>
+<div id="comments">
+<%= render @product.comments %>
+</div>
+<% if session[:user_id]%>
+<%= render :partial=>"comments/form"%>
+<% end %>

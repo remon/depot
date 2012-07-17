@@ -1,0 +1,24 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>review</th>
+   
+  </tr>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.body %></td>
+   
+    <td><%= link_to 'Show', product_comment_path(@product,comment) %></td>
+    <td><%= link_to 'Edit', edit_product_comment_path(@product,comment) %></td>
+    <td><%= link_to 'Destroy',[@product, comment], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

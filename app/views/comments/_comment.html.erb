@@ -1,0 +1,12 @@
+<%= div_for comment do %>
+<%= comment.body %>
+
+<span class='actions'>
+	
+<%= link_to 'Delete', [@album, comment],
+:confirm => 'Are you sure?', :method => :delete %>
+
+</span>
+<% end %>
+</h3>
+
