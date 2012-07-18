@@ -12,7 +12,7 @@ gem 'mysql2', '~> 0.3.7'
 gem "squeel"
 gem 'friendly_id'
 
-
+gem 'bundler', '~> 1.0.17' ,:platform=>:ruby
 gem 'json'
 #gem 'will_paginate', '>= 3.0.pre'
 gem 'kaminari'
