@@ -7,12 +7,12 @@ gem 'rails', '3.2.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'mysql2', '~> 0.3.7'
+
 #gem "meta_where"
 gem "squeel"
 gem 'friendly_id'
 
-gem 'bundler', '~> 1.0.17' ,:platform=>:ruby
+gem 'bundler', '~> 1.1.0' ,:platform=>:ruby
 gem 'json'
 #gem 'will_paginate', '>= 3.0.pre'
 gem 'kaminari'
