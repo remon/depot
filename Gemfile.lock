@@ -108,10 +108,9 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
-<<<<<<< HEAD
-    sqlite3 (1.3.6-x86-mingw32)
-=======
->>>>>>> ded3c4856116ff6841a8c7042db45e0c92fcbb41
+
+    sqlite3 (1.3.6)
+
     squeel (1.0.7)
       activerecord (~> 3.0)
       activesupport (~> 3.0)
@@ -130,8 +129,7 @@ PLATFORMS
 
   x86-mingw32
   ruby
-=======
-ruby
+
 
 
 DEPENDENCIES
