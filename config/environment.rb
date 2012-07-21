@@ -1,5 +1,7 @@
 # Load the rails application
+
 require "paperclip"
+
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application

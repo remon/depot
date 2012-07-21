@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20120414234639) do
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
     t.integer  "quantity",   :default => 1
-    t.integer  "order_id"
   end
 
   create_table "orders", :force => true do |t|
@@ -42,13 +41,6 @@ ActiveRecord::Schema.define(:version => 20120414234639) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.date     "shipping"
-  end
-
-  create_table "photos", :force => true do |t|
-    t.integer  "product_id"
-    t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|

@@ -28,8 +28,12 @@ Depot::Application.routes.draw do
   resources :products do
     resources :comments
   end
+
+  
  get "store/index",:as=>"store"
   get "store/main",:as=>"main"
+  
+
  root :to=>"store#index",:as=>"store"
 #root :to=>"store#main",:as=>"main"
 

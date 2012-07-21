@@ -23,7 +23,9 @@ group :assets do
  gem 'sass-rails', '~> 3.1'
 #gem 'bootstrap-sass', '~> 2.0.4.0'
 #gem "twitter-bootstrap-rails"
-  #gem "paperclip", "~> 2.7"
+
+
+
   gem 'twitter-bootstrap-rails', :git => "git://github.com/seyhunak/twitter-bootstrap-rails.git", :branch => "static"
   #gem 'twitter-bootstrap-rails'
   #gem 'bootstrap-sass'
